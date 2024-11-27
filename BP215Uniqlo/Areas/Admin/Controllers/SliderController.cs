@@ -42,7 +42,7 @@ namespace BP215Uniqlo.wwwroot.Admin.Controllers
             };
             await _context.Sliders.AddAsync(slider);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Create)); 
+            return RedirectToAction(nameof(Index)); 
         }
         public async Task<IActionResult> Update(int? id)
         {
