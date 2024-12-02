@@ -14,8 +14,9 @@ namespace BP215Uniqlo.ViewModels.Product
         public decimal SellPrice { get; set; }
         [Required(ErrorMessage ="Say daxil edilmedi")]
         public int Quantity { get; set; }
-        public float Discount { get; set; }
-        public IFormFile CoverImage { get; set; } 
+        public int Discount { get; set; }
+        public IFormFile CoverFile { get; set; } = null!;
+        public IEnumerable<IFormFile> OtherImages { get; set; }
         public int? CategoryId { get; set; }
         
 

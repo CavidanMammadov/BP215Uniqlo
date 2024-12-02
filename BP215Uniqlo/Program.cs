@@ -21,9 +21,7 @@ namespace BP215Uniqlo
             app.UseStaticFiles();
             app.MapControllerRoute(
             name: "areas",
-            pattern: "{area:exists}/{controller=DashBoard}/{action=Index}/{id?}"
-          );
-
+            pattern: "{area:exists}/{controller=DashBoard}/{action=Index}/{id?}");
 
             app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             app.Run();

@@ -83,7 +83,7 @@ namespace BP215Uniqlo.wwwroot.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+       
         public async Task<IActionResult> Delete(int? id)
         {
             if (!id.HasValue) return BadRequest();

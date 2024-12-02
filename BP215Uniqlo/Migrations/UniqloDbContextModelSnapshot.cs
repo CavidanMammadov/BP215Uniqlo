@@ -70,8 +70,8 @@ namespace BP215Uniqlo.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Discount")
-                        .HasColumnType("real");
+                    b.Property<int>("Discount")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -91,6 +91,36 @@ namespace BP215Uniqlo.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("BP215Uniqlo.Models.ProductImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("FileUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("Productid")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Productid");
+
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("BP215Uniqlo.Models.Slider", b =>
@@ -138,9 +168,23 @@ namespace BP215Uniqlo.Migrations
                     b.Navigation("category");
                 });
 
+            modelBuilder.Entity("BP215Uniqlo.Models.ProductImage", b =>
+                {
+                    b.HasOne("BP215Uniqlo.Models.Product", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("Productid");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("BP215Uniqlo.Models.Category", b =>
                 {
                     b.Navigation("products");
+                });
+
+            modelBuilder.Entity("BP215Uniqlo.Models.Product", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }
