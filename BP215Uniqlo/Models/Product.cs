@@ -13,7 +13,7 @@ namespace BP215Uniqlo.Models
         public string CoverImage { get; set; } = null!;
         public int? CategoryId { get; set; }
         public Category? category { get; set; }
-        public IEnumerable<ProductImage>? Images { get; set; }
+        public IEnumerable<ProductImage>? ProductImages { get; set; }
 
         public static implicit operator Product(ProductCreateVm vm)
         {

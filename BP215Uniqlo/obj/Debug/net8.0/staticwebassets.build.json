@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UyFr+8jTvHcwGBTdqCbCmfvTHkIDL5ConxAwuyo8cgQ=",
+  "Hash": "tcabfX6jb9kb9WErv2OcZkusEhBxDU4dxNwVluwulms=",
   "Source": "BP215Uniqlo",
   "BasePath": "_content/BP215Uniqlo",
   "Mode": "Default",
@@ -40639,6 +40639,25 @@
       "OriginalItemSpec": "wwwroot\\imgs\\products\\pcv3mb3k.tok.png"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\imgs\\products\\rqgwtovk.fwm.jpg",
+      "SourceId": "BP215Uniqlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\",
+      "BasePath": "_content/BP215Uniqlo",
+      "RelativePath": "imgs/products/rqgwtovk.fwm.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\rqgwtovk.fwm.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\imgs\\products\\rwcigi0n.txx.jpeg",
       "SourceId": "BP215Uniqlo",
       "SourceType": "Discovered",
@@ -40848,6 +40867,25 @@
       "OriginalItemSpec": "wwwroot\\imgs\\products\\ypl2stt0.jte.webp"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\imgs\\products\\yptuqafw.ww3.png",
+      "SourceId": "BP215Uniqlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\",
+      "BasePath": "_content/BP215Uniqlo",
+      "RelativePath": "imgs/products/yptuqafw.ww3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\products\\yptuqafw.ww3.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\imgs\\products\\zjtsmdav.2ou.webp",
       "SourceId": "BP215Uniqlo",
       "SourceType": "Discovered",
@@ -40865,6 +40903,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\products\\zjtsmdav.2ou.webp"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\imgs\\sliders\\0zw0oon5.dqu.jpg",
+      "SourceId": "BP215Uniqlo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\",
+      "BasePath": "_content/BP215Uniqlo",
+      "RelativePath": "imgs/sliders/0zw0oon5.dqu.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\sliders\\0zw0oon5.dqu.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\wwwroot\\imgs\\sliders\\24ktn2n1.mj2.jpg",

@@ -1,9 +1,10 @@
-﻿using BP215Uniqlo.Models;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using  BP215Uniqlo.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BP215Uniqlo.DataAcces
 {
-    public class UniqloDbContext:DbContext
+    public class UniqloDbContext:IdentityDbContext<User>
     {   
        public  DbSet<Slider> Sliders { get; set; }
         public DbSet<Category>  Categories { get; set; }

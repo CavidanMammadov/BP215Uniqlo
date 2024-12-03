@@ -101,7 +101,7 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
                 Discount = x.Discount,
                 CoverFileUrl = x.CoverImage,
                 Quantity = x.Quantity,
-                OtherImagesUrls = x.Images.Select(y => new ImageUrlAndId
+                OtherImagesUrls = x.ProductImages.Select(y => new ImageUrlAndId
                 {
                     Url = y.FileUrl,
                     Id = y.Id
@@ -112,13 +112,22 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
 
             return View(product);
         }
-        public async Task<IActionResult> DeleteImage(int? Id)
-        { if (!Id.HasValue) return BadRequest();
+        public async Task<IActionResult> DeleteImage(int? Id )
+        {
+            // var product = await _context.Product.Include(x=>x.ProductImages).FirstOrDefault(y => y.Id == ProductId);
+
+
+            if (!Id.HasValue) return BadRequest();
             var img = await _context.ProductImages.FindAsync(Id.Value);
             if (img == null) return NotFound();
             _context.ProductImages.Remove(img);
             await _context.SaveChangesAsync();
-            return  Ok();
+            string path = Path.Combine(_env.WebRootPath, "imgs", "products", img.FileUrl);
+
+            if (Path.Exists(path))
+                System.IO.File.Delete(path);
+
+            return Ok();
         }
 
         //public async Task<IActionResult> Update(int? id)
@@ -147,7 +156,7 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
                 ModelState.AddModelError("CoverFile", "Image must be less than 600 kb");
 
 
-            if (!ModelState.IsValid) return BadRequest();
+            if (ModelState.IsValid) return BadRequest();
             var data = await _context.Product.FindAsync(id);
             if (data == null) return View();
 
@@ -162,20 +171,31 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
             data.Discount = vm.Discount;
             data.CategoryId = vm.CategoryId;
             data.CoverImage = NewFileName;
-
+           
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
 
         }
+
+       
         public async Task<IActionResult> Delete(int? id)
         {
             if (!id.HasValue) return BadRequest();
-            var data = await _context.Product.FindAsync(id);
-            if (data is null) return NotFound();
+            var data = await _context.Product.Include(x => x.ProductImages).FirstOrDefaultAsync(x => x.Id == id);
+            if (data is null) return BadRequest();
             _context.Product.Remove(data);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+
+
+
+            //if (!id.HasValue) return BadRequest();
+            //var data = await _context.Product.FindAsync(id);
+            //if (data is null) return NotFound();
+            //_context.Product.Remove(data);
+            //await _context.SaveChangesAsync();
+            //return RedirectToAction(nameof(Index));
         }
     }
 }
