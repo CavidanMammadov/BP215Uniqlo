@@ -170,7 +170,7 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
             data.Quantity = vm.Quantity;
             data.Discount = vm.Discount;
             data.CategoryId = vm.CategoryId;
-            data.CoverImage = NewFileName;
+            data.CoverImage = vm.CoverFileUrl;
            
 
             await _context.SaveChangesAsync();
