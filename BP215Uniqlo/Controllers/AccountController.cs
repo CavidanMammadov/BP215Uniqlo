@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BP215Uniqlo.Controllers
 {
-    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInmanager) : Controller
+    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
     {
         public IActionResult Register()
         {
@@ -47,23 +47,25 @@ namespace BP215Uniqlo.Controllers
             if (vm.UserNameOrEmail.Contains('@'))
                 user = await _userManager.FindByEmailAsync(vm.UserNameOrEmail);
             else
-                user = await _userManager.FindByEmailAsync(vm.UserNameOrEmail);
+                user = await _userManager.FindByNameAsync(vm.UserNameOrEmail);
             if (user == null)
             {
                 ModelState.AddModelError(" ", "USERNAME OR PASSWORD IS INCORRET");
                 return View();
             }
-            var result = await _signInmanager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
-            if (result.IsNotAllowed)
+            var result = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
+            if (!result.Succeeded)
             {
-                ModelState.AddModelError(" ", "Username or password are incorrect ");
-            }
-            if (result.IsLockedOut)
-            {
-                ModelState.AddModelError(" ", "wait until " + user.LockoutEnd!.Value.ToString("yyyy-MM-dd HH:mm"));
+                if (result.IsNotAllowed)
+                
+                    ModelState.AddModelError("", "UserName or Password is incorrect");
+                if (result.IsLockedOut)
+                    ModelState.AddModelError("", "wait until "+ user.LockoutEnd!.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                
+
             return View();
             }
-            return RedirectToAction("index", "home");
+            return RedirectToAction("Index", "Home");
         }
 
 

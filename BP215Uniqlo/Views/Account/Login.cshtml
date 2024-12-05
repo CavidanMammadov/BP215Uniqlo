@@ -44,27 +44,28 @@
                                     </div>
                                     <form class="user" method="post">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input asp-for="UserNameOrEmail"   class="form-control form-control-user" />
                                             <span class="text-danger" asp-validation-for="UserNameOrEmail">
 
                                             </span>
                                            
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input asp-for="Password" class="form-control form-control-user" />
                                             <span asp-validation-for="Password"></span>
                                                    
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck" asp-for="RememberMe">
+                                                <input asp-for="RememberMe" type="checkbox" class="custom-control-input" >
                                                 <label class="custom-control-label" for="customCheck" asp-for="RememberMe">
                                                     Remember
                                                     Me
                                                 </label>
                                             </div>
                                         </div>
-                                        <button href="~/Admin/index.html" class="btn btn-primary btn-user btn-block">
+                                        <div class=" text-danger" asp-validation-summary="ModelOnly"></div>
+                                        <button  class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                         <hr>
@@ -73,7 +74,7 @@
                                     <hr>
 
                                     <div class="text-center">
-                                        <a class="small" asp-action="register">Create an Account!</a>
+                                        <a class="small" asp-action="Register">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
