@@ -71,42 +71,25 @@
                         <!-- End MAinmenu Ares -->
                         <div class="col-md-2 col-lg-2 col-6">
                             <ul class="menu-extra">
-                               @*  @if (Context.User.Identity?.IsAuthenticated == true)
-                                {
-
-                                    <li>
-                                        <a href="login-register.html">
-                                            <span class="ti-shift-right"></span>
-                                        </a>
-                                    </li>
-                                }
-                                else
-                                {
-                                    <li>
-                                        <a asp-action="Login" asp-controller="Account">
-                                            <span class="ti-user"></span>
-                                        </a>
-                                    </li>
-
-                                } *@
                                 @if (Context.User.Identity?.IsAuthenticated == true)
                                 {
-                                    <!-- İstifadəçi doğrulanıbsa, login-register.html səhifəsinə link göstərin -->
+
                                     <li>
-                                        <a href="login-register.html">
+                                        <a asp-action="LogOut" asp-controller="Account">
                                             <span class="ti-shift-right"></span>
                                         </a>
                                     </li>
                                 }
-                                else
+                                
                                 {
-                                    <!-- İstifadəçi doğrulanmayıbsa, login səhifəsinə yönləndirən link göstərin -->
                                     <li>
-                                        <a asp-action="Login" asp-controller="Account">
+                                        <a asp-action="login" asp-controller="account">
                                             <span class="ti-user"></span>
                                         </a>
                                     </li>
+
                                 }
+
 
                                 <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
                             </ul>

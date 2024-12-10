@@ -9,6 +9,8 @@ namespace BP215Uniqlo.DataAcces
        public  DbSet<Slider> Sliders { get; set; }
         public DbSet<Category>  Categories { get; set; }
         public DbSet<Product> Product {  get; set; } 
+        public DbSet<Tag> Tags { get; set; }    
+        public DbSet<ProductRating> PoductRatings { get; set; }
         public DbSet<ProductImage> ProductImages {  get; set; } 
         public UniqloDbContext(DbContextOptions opt ) : base(opt) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

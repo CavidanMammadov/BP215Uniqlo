@@ -32,20 +32,24 @@ namespace BP215Uniqlo.Controllers
                 Price = x.SellPrice
             }).ToListAsync();
             return View(vm);
-        //    vm.Products = await _context.Product
-        //        .Where(x => !x.IsDeleted)
-        //        .Select(x => new ProductItemVm
-        //        {
-        //            Discount = x.Discount,
-        //            Id = x.Id,
-        //            ImageUrl = x.CoverImage,
-        //            IsInStock = x.Quantity > 0,
-        //            Name = x.Name,
-        //            Price = x.SellPrice
-        //        }).ToListAsync();
-        //    return View(vm);
+            //    vm.Products = await _context.Product
+            //        .Where(x => !x.IsDeleted)
+            //        .Select(x => new ProductItemVm
+            //        {
+            //            Discount = x.Discount,
+            //            Id = x.Id,
+            //            ImageUrl = x.CoverImage,
+            //            IsInStock = x.Quantity > 0,
+            //            Name = x.Name,
+            //            Price = x.SellPrice
+            //        }).ToListAsync();
+            //    return View(vm);
         }
         public IActionResult About()
+        {
+            return View();
+        }
+        public async Task<IActionResult> Accesdenied()
         {
             return View();
         }

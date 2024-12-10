@@ -1,5 +1,7 @@
-﻿using BP215Uniqlo.Models;
+﻿using BP215Uniqlo.Enums;
+using BP215Uniqlo.Models;
 using BP215Uniqlo.ViewModels.Auths;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,13 +9,16 @@ namespace BP215Uniqlo.Controllers
 {
     public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
     {
+        bool isAuthenticated => User.Identity?.IsAuthenticated   ?? false;
         public IActionResult Register()
         {
+            if (isAuthenticated) return RedirectToAction("Index","Name");
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateVM vm)
         {
+            if (isAuthenticated) return RedirectToAction("Index","Home");
             if (!ModelState.IsValid)
                 return View();
             User user = new User
@@ -33,6 +38,16 @@ namespace BP215Uniqlo.Controllers
                 }
                 return View();
             }
+            var roleResult = await _userManager.AddToRoleAsync(user, nameof(Roles.User));
+            if (!roleResult.Succeeded)
+            {
+                foreach (var error in roleResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+
+                }
+                return View();
+            }
             return View();
         }
         public async Task<IActionResult> Login()
@@ -40,7 +55,7 @@ namespace BP215Uniqlo.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVM vm)
+        public async Task<IActionResult> Login(LoginVM vm, string? ReturnUrl = null)
         {
             if (!ModelState.IsValid) return View();
             User? user = null;
@@ -57,15 +72,26 @@ namespace BP215Uniqlo.Controllers
             if (!result.Succeeded)
             {
                 if (result.IsNotAllowed)
-                
+
                     ModelState.AddModelError("", "UserName or Password is incorrect");
                 if (result.IsLockedOut)
-                    ModelState.AddModelError("", "wait until "+ user.LockoutEnd!.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                
+                    ModelState.AddModelError("", "wait until " + user.LockoutEnd!.Value.ToString("yyyy-MM-dd HH:mm:ss"));
 
-            return View();
+
+                return View();
             }
-            return RedirectToAction("Index", "Home");
+            if (string.IsNullOrEmpty(ReturnUrl))
+            {
+                if( await _userManager.IsInRoleAsync(user, "Admin"))
+                return RedirectToAction("Index", new { Controller="DashBoard" , Area = "Admin"});
+            }
+            return LocalRedirect(ReturnUrl);
+        }
+        [Authorize]
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
         }
 
 

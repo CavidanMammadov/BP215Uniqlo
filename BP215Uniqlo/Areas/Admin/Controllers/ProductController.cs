@@ -1,14 +1,17 @@
 ﻿using BP215Uniqlo.DataAcces;
 using BP215Uniqlo.Extensions;
+using BP215Uniqlo.Helpers;
 using BP215Uniqlo.Models;
 using BP215Uniqlo.ViewModels.Common;
 using BP215Uniqlo.ViewModels.Product;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BP215Uniqlo.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles= RoleConstants.Product)]
     public class ProductController(IWebHostEnvironment _env, UniqloDbContext _context) : Controller
     {
         public async Task<IActionResult> Index()

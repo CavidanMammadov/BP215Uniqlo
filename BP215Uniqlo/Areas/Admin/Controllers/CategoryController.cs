@@ -2,12 +2,14 @@
 using BP215Uniqlo.Models;
 using BP215Uniqlo.ViewModels.Category;
 using BP215Uniqlo.ViewModels.Product;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BP215Uniqlo.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoryController(UniqloDbContext _context) : Controller
     {
 
@@ -45,7 +47,7 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? Id , CategoryCreateVM vm)
+        public async Task<IActionResult> Update(int? Id , CategoryUpdateVm vm)
         {
             if (!ModelState.IsValid) return BadRequest();
             var data = await _context.Categories.FindAsync(Id);
