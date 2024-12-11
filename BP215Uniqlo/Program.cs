@@ -1,5 +1,6 @@
 using BP215Uniqlo.DataAcces;
 using BP215Uniqlo.Extensions;
+using BP215Uniqlo.Helpers;
 using BP215Uniqlo.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -34,6 +35,8 @@ namespace BP215Uniqlo
             {
                 x.AccessDeniedPath = "/Home/Accesdenied";
             });
+            SmtpOptions opt = new();
+            builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("Smtp"));
 
 
             var app = builder.Build();

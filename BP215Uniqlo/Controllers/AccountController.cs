@@ -1,17 +1,21 @@
 ﻿using BP215Uniqlo.Enums;
+using BP215Uniqlo.Helpers;
 using BP215Uniqlo.Models;
 using BP215Uniqlo.ViewModels.Auths;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
 using System.Net;
 using System.Net.Mail;
 
 namespace BP215Uniqlo.Controllers
 {
-    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
+    public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager,
+        IOptions<SmtpOptions> opts) : Controller
     {
+         SmtpOptions _smtpOpt = opts.Value;
         bool isAuthenticated => User.Identity?.IsAuthenticated ?? false;
         public IActionResult Register()
         {
@@ -49,6 +53,7 @@ namespace BP215Uniqlo.Controllers
                     ModelState.AddModelError("", error.Description);
 
                 }
+               string token = await   _userManager.GenerateEmailConfirmationTokenAsync(user);
                 return View();
             }
             return View();
@@ -85,8 +90,14 @@ namespace BP215Uniqlo.Controllers
             }
             if (string.IsNullOrEmpty(ReturnUrl))
             {
-                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                if (await _userManager.IsInRoleAsync(user, "Admin")) { 
+                
                     return RedirectToAction("Index", new { Controller = "DashBoard", Area = "Admin" });
+                }
+                else
+                {
+                    return RedirectToAction("Index", new { Controller = "Home" });
+                }
             }
             return LocalRedirect(ReturnUrl);
         }
@@ -96,19 +107,9 @@ namespace BP215Uniqlo.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(Login));
         }
-        public async Task<IActionResult> Test()
+        public async Task<IActionResult> Send()
         {
-            SmtpClient smtp = new();
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
-            smtp.EnableSsl = true;
-            smtp.Credentials = new NetworkCredential("cavidanbm-bp215@code.edu.az", "bcup uiox satv epjq");
-            MailAddress from = new MailAddress("cavidanbm-bp215@code.edu.az","CAVIDAN COMPANY");
-            MailAddress to = new("mematisirinov31@gmail.com");
-            MailMessage msg = new MailMessage(from, to);
-            msg.Subject =  "Security alert!";
-            msg.Body = " ee ne dost e dombal memati";
-            smtp.Send(msg);
+          
             return Ok("Alindi");
              
         }
