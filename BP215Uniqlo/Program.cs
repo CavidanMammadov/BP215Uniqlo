@@ -20,7 +20,7 @@ namespace BP215Uniqlo
             });
             builder.Services.AddIdentity<User, IdentityRole>(opt =>
             {
-                opt.User.AllowedUserNameCharacters = "qwertyuipasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_.";
+                opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+/ ";
                 opt.Password.RequiredLength = 3;
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequireDigit = false;

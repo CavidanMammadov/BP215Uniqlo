@@ -16,7 +16,7 @@ namespace BP215Uniqlo.Areas.Admin.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            var data = await _context.Product.Include(x => x.category).ToListAsync();
+            var data = await _context.Product.Include(x => x.Category).ToListAsync();
             return View(data);
         }
         public async Task<IActionResult> Create()

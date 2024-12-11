@@ -1,6 +1,7 @@
 ﻿@model Product
 @{
     ViewData["Title"] = Model.Name;
+    var rating = Model.Ratings.Count > 0 ? Model.Ratings.Average(x => x.Rating) : 0;
 }
 
 <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
@@ -62,9 +63,23 @@
                     <div class="pro__detl__title">
                         <h2>@Model.Name</h2>
                     </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                      <form asp-action="Rate" method="get">
+                        <input  name="productId" value="@Model.Id" type="hidden" />
+                        <input  name="rating" value="@ViewBag.Rating" type="number" min="1" max="5" />
+                       <button class="btn btn-link">Rate</button>
+                       </form>
+                        
+                    }
                     <div class="pro__dtl__rating">
                         <ul class="pro__rating">
+                            @for (int i = 0; i < Math.Ceiling(rating); i++)
+                            {
                             <li><span class="ti-star"></span></li>
+                              
+                            }
+                            (@rating))
                             <li><span class="ti-star"></span></li>
                             <li><span class="ti-star"></span></li>
                             <li><span class="ti-star"></span></li>

@@ -4,21 +4,24 @@ using BP215Uniqlo.ViewModels.Auths;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
+using System.Net;
+using System.Net.Mail;
 
 namespace BP215Uniqlo.Controllers
 {
     public class AccountController(UserManager<User> _userManager, SignInManager<User> _signInManager) : Controller
     {
-        bool isAuthenticated => User.Identity?.IsAuthenticated   ?? false;
+        bool isAuthenticated => User.Identity?.IsAuthenticated ?? false;
         public IActionResult Register()
         {
-            if (isAuthenticated) return RedirectToAction("Index","Name");
+            if (isAuthenticated) return RedirectToAction("Index", "Name");
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Register(UserCreateVM vm)
         {
-            if (isAuthenticated) return RedirectToAction("Index","Home");
+            if (isAuthenticated) return RedirectToAction("Index", "Home");
             if (!ModelState.IsValid)
                 return View();
             User user = new User
@@ -55,7 +58,7 @@ namespace BP215Uniqlo.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVM vm, string? ReturnUrl = null)
+        public async Task<IActionResult> Login(LoginVM vm, string? ReturnUrl)
         {
             if (!ModelState.IsValid) return View();
             User? user = null;
@@ -82,8 +85,8 @@ namespace BP215Uniqlo.Controllers
             }
             if (string.IsNullOrEmpty(ReturnUrl))
             {
-                if( await _userManager.IsInRoleAsync(user, "Admin"))
-                return RedirectToAction("Index", new { Controller="DashBoard" , Area = "Admin"});
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                    return RedirectToAction("Index", new { Controller = "DashBoard", Area = "Admin" });
             }
             return LocalRedirect(ReturnUrl);
         }
@@ -92,6 +95,22 @@ namespace BP215Uniqlo.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(Login));
+        }
+        public async Task<IActionResult> Test()
+        {
+            SmtpClient smtp = new();
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.Credentials = new NetworkCredential("cavidanbm-bp215@code.edu.az", "bcup uiox satv epjq");
+            MailAddress from = new MailAddress("cavidanbm-bp215@code.edu.az","CAVIDAN COMPANY");
+            MailAddress to = new("mematisirinov31@gmail.com");
+            MailMessage msg = new MailMessage(from, to);
+            msg.Subject =  "Security alert!";
+            msg.Body = " ee ne dost e dombal memati";
+            smtp.Send(msg);
+            return Ok("Alindi");
+             
         }
 
 

@@ -123,6 +123,32 @@ namespace BP215Uniqlo.Migrations
                     b.ToTable("ProductImages");
                 });
 
+            modelBuilder.Entity("BP215Uniqlo.Models.ProductRating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PoductRatings");
+                });
+
             modelBuilder.Entity("BP215Uniqlo.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -405,11 +431,11 @@ namespace BP215Uniqlo.Migrations
 
             modelBuilder.Entity("BP215Uniqlo.Models.Product", b =>
                 {
-                    b.HasOne("BP215Uniqlo.Models.Category", "category")
+                    b.HasOne("BP215Uniqlo.Models.Category", "Category")
                         .WithMany("products")
                         .HasForeignKey("CategoryId");
 
-                    b.Navigation("category");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("BP215Uniqlo.Models.ProductImage", b =>
@@ -419,6 +445,21 @@ namespace BP215Uniqlo.Migrations
                         .HasForeignKey("Productid");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("BP215Uniqlo.Models.ProductRating", b =>
+                {
+                    b.HasOne("BP215Uniqlo.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.HasOne("BP215Uniqlo.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
