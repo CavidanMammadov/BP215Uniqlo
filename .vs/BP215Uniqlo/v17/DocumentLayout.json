@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\services\\implements\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\services\\implements\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\helpers\\smtpoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\helpers\\smtpoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\services\\abstracts\\iemailservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\services\\abstracts\\iemailservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|c:\\users\\user\\source\\repos\\bp215uniqlo\\bp215uniqlo\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6994792-1F0A-4DAA-A56B-47BC253F2AA5}|BP215Uniqlo\\BP215Uniqlo.csproj|solutionrelative:bp215uniqlo\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,88 +22,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\appsettings.Development.json",
-              "RelativeToolTip": "BP215Uniqlo\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-11T14:50:10.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\appsettings.json",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\appsettings.json",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\appsettings.json",
-              "RelativeToolTip": "BP215Uniqlo\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-11T14:40:56.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Services\\Implements\\EmailService.cs",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\Services\\Implements\\EmailService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Services\\Implements\\EmailService.cs",
-              "RelativeToolTip": "BP215Uniqlo\\Services\\Implements\\EmailService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:37:45.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEmailServices.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Services\\Abstracts\\IEmailServices.cs",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\Services\\Abstracts\\IEmailServices.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Services\\Abstracts\\IEmailServices.cs",
-              "RelativeToolTip": "BP215Uniqlo\\Services\\Abstracts\\IEmailServices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:37:23.313Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "BP215Uniqlo\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAAABEAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:25:41.391Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BP215Uniqlo\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BP215Uniqlo\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAALAAAAAAAAAAAAAIwL0AAACUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T01:33:49.039Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Program.cs",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Program.cs",
-              "RelativeToolTip": "BP215Uniqlo\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACYAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:22:07.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SmtpOptions.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Helpers\\SmtpOptions.cs",
-              "RelativeDocumentMoniker": "BP215Uniqlo\\Helpers\\SmtpOptions.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\Helpers\\SmtpOptions.cs",
-              "RelativeToolTip": "BP215Uniqlo\\Helpers\\SmtpOptions.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T14:02:26.392Z"
             }
           ]
         }

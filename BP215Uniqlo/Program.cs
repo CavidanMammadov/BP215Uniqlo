@@ -35,11 +35,14 @@ namespace BP215Uniqlo
             {
                 x.AccessDeniedPath = "/Home/Accesdenied";
             });
+            
             SmtpOptions opt = new();
             builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("Smtp"));
+            //builder.Services.AddSession();
 
 
             var app = builder.Build();
+          //  app.UseSession();
             app.UseStaticFiles();
             app.UseUserSeed();
             app.MapControllerRoute(name: "register",
