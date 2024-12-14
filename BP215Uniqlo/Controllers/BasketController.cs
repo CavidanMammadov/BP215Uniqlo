@@ -12,7 +12,7 @@ namespace BP215Uniqlo.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Add(int id)
+        public async Task<IActionResult> AddProduct(int id)
         {
             if (!await _context.Product.AnyAsync(x => x.Id == id)) return NotFound();
             var basketItems = JsonSerializer.Deserialize<List<BasketProductItemVM>>(Request.Cookies["basket"] ?? "[]");
@@ -20,28 +20,14 @@ namespace BP215Uniqlo.Controllers
             var item = basketItems.FirstOrDefault(x => x.Id == id);
             if (item == null)
             {
-                item = new BasketProductItemVM
-                {
-                    Id = id,
-                    Count = 0
-                };
+                item = new BasketProductItemVM(id );
                 basketItems.Add(item);
 
             }
             item.Count++;
             Response.Cookies.Append("basket", JsonSerializer.Serialize(basketItems));
-            return Ok();
-            //object obj = new
-            //{
-            //    Name = " Cavidan ",
-            //    SurName = " Mammadov "
-            //};
-            //string a = JsonSerializer.Serialize(obj);
-            //return Json(new
-            //{
-            //    a,
-            //    obj
-            //});
+            RedirectToAction(nameof(Index));
+            return RedirectToAction("Index","home");
         }
     }
 }
