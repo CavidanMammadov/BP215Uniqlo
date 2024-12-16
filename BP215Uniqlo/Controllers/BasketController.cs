@@ -20,14 +20,48 @@ namespace BP215Uniqlo.Controllers
             var item = basketItems.FirstOrDefault(x => x.Id == id);
             if (item == null)
             {
-                item = new BasketProductItemVM(id );
+                item = new BasketProductItemVM(id);
                 basketItems.Add(item);
 
             }
             item.Count++;
             Response.Cookies.Append("basket", JsonSerializer.Serialize(basketItems));
-            RedirectToAction(nameof(Index));
-            return RedirectToAction("Index","home");
+
+            return RedirectToAction("Index", "Home");
+        } public async Task<IActionResult> Delete(int id)
+        {
+            if (!await _context.Product.AnyAsync(x => x.Id == id)) return NotFound();
+            var basketItems = JsonSerializer.Deserialize<List<BasketProductItemVM>>(Request.Cookies["basket"] ?? "[]");
+
+            var item = basketItems.FirstOrDefault(x => x.Id == id);
+            if (item == null)
+            {
+                item = new BasketProductItemVM(id);
+                basketItems.Add(item);
+
+            }
+            item.Count--;
+            Response.Cookies.Delete("basket");
+
+            return RedirectToAction("Index", "Home");
         }
+       
+        //public async Task<IActionResult> AddProduct(int id)
+        //{
+        //    if (!await _context.Product.AnyAsync(x => x.Id == id)) return NotFound();
+        //    var basketItems = JsonSerializer.Deserialize<List<BasketProductItemVM>>(Request.Cookies["basket"] ?? "[]");
+
+        //    var item = basketItems.FirstOrDefault(x => x.Id == id);
+        //    if (item == null)
+        //    {
+        //        item = new BasketProductItemVM(id );
+        //        basketItems.Add(item);
+
+        //    }
+        //    item.Count++;
+        //    Response.Cookies.Append("basket", JsonSerializer.Serialize(basketItems));
+        //    RedirectToAction(nameof(Index));
+        //    return RedirectToAction("Index","home");
+        //}
     }
 }

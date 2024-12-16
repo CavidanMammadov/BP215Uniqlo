@@ -17,6 +17,7 @@ namespace BP215Uniqlo.Models
         public ICollection<ProductRating> Ratings { get; set; }
         
         public IEnumerable<ProductImage>? ProductImages { get; set; }
+        public ICollection<ProductComment>? Comments { get; set; }
 
         public static implicit operator Product(ProductCreateVm vm)
         {
