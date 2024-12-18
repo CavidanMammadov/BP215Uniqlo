@@ -17,7 +17,7 @@ namespace BP215Uniqlo.Controllers
             ProductIndexVM vm = new ProductIndexVM
             {
                 Products = await query.Select(x => new prod.ProductItemVm
-                {
+               {
                     IsInStock = x.Quantity > 0,
                     Discount = x.Discount,
                     Name = x.Name,
@@ -34,11 +34,33 @@ namespace BP215Uniqlo.Controllers
             {
                 Name = x.Name,
                 Id = x.Id,
-                Count= x.products.Count()
+                Count = x.products.Count()
             }).ToListAsync();
             vm.Categories.AddRange(cats);
             return View(vm);
 
+        }
+        public async Task<IActionResult> Filter(int? catId = 0, string? price = null , int? minPrice = 10 , int? maxPrice =500)
+        {
+            if (!catId.HasValue) return BadRequest();
+            var query = _context.Product.Where(x => !x.IsDeleted && x.SellPrice >= minPrice && x.SellPrice <= maxPrice);
+            if (catId != 0)
+            {
+
+                query = query.Where( x=> x.CategoryId == catId);
+            }
+            var data = await query.Select(x => new prod.ProductItemVm
+            {
+                IsInStock = x.Quantity > 0,
+                Discount = x.Discount,
+                Name = x.Name,
+                ImageUrl = x.CoverImage,
+                Price = x.SellPrice,
+                Id = x.Id
+
+
+            }).ToListAsync();
+            return PartialView("_ProductPartial", data);
         }
         public async Task<IActionResult> Details(int? id)
         {

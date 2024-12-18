@@ -257,6 +257,12 @@
                                 "showMethod": "fadeIn",
                                 "hideMethod": "fadeOut"
                             }
+                            fetch('/Basket/GetBasket/')
+                                .then(x => x.text())
+                                .then(x => {
+                                    $('shopping__cart').html(x);
+
+                                });
                         }
                     })
             })
