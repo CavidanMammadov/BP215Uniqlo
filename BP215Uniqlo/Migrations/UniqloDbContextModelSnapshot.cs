@@ -93,6 +93,32 @@ namespace BP215Uniqlo.Migrations
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("BP215Uniqlo.Models.ProductComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("USerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductComment");
+                });
+
             modelBuilder.Entity("BP215Uniqlo.Models.ProductImage", b =>
                 {
                     b.Property<int>("Id")
@@ -146,7 +172,7 @@ namespace BP215Uniqlo.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("PoductRatings");
+                    b.ToTable("ProductRatings");
                 });
 
             modelBuilder.Entity("BP215Uniqlo.Models.Slider", b =>
@@ -438,6 +464,15 @@ namespace BP215Uniqlo.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("BP215Uniqlo.Models.ProductComment", b =>
+                {
+                    b.HasOne("BP215Uniqlo.Models.Product", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("BP215Uniqlo.Models.ProductImage", b =>
                 {
                     b.HasOne("BP215Uniqlo.Models.Product", "Product")
@@ -450,7 +485,7 @@ namespace BP215Uniqlo.Migrations
             modelBuilder.Entity("BP215Uniqlo.Models.ProductRating", b =>
                 {
                     b.HasOne("BP215Uniqlo.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("Ratings")
                         .HasForeignKey("ProductId");
 
                     b.HasOne("BP215Uniqlo.Models.User", "User")
@@ -535,7 +570,11 @@ namespace BP215Uniqlo.Migrations
 
             modelBuilder.Entity("BP215Uniqlo.Models.Product", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("ProductImages");
+
+                    b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618
         }

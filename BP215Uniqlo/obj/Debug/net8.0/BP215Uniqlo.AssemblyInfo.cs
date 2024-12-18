@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BP215Uniqlo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47d5594f45afd95a38033ad4c093bac295e894f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2246986b1ee34a7ed7de6af3493f9bc0a4bb9ca5")]
 [assembly: System.Reflection.AssemblyProductAttribute("BP215Uniqlo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BP215Uniqlo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

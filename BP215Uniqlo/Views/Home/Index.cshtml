@@ -207,14 +207,18 @@
                                                 if (item.Discount > 0)
                                                 {
                                                     <del>@item.Price</del>
-                                                    <span class=" text-danger">$@item.Price-@item.Price * @item.Discount/100</span>
-                                                    <span class="popular__pro__prize">@item.Price</span>
+                                                    <span class=" text-danger">$@(item.Price-item.Price * item.Discount/100)</span>
+                                                 
                                                 }
                                                 else
                                                 {
                                                     <span class="popular__pro__prize">@item.Price</span>
                                                 }
 
+                                            }
+                                            else
+                                            {
+                                                <span class="popular__pro__prize">Stok yenilenecek</span>
                                             }
                                         </div>
                                     </div>
@@ -239,8 +243,7 @@
                     .then(x => {
                         if (x.ok) {
                             Command: toastr["success"]("Məhsul səbətə əlavə olundu")
-
-                            toastr.options = {
+                                toastr.options = {
                                 "closeButton": false,
                                 "debug": false,
                                 "newestOnTop": false,
@@ -260,7 +263,7 @@
                             fetch('/Basket/GetBasket/')
                                 .then(x => x.text())
                                 .then(x => {
-                                    $('shopping__cart').html(x);
+                                    $('.shopping__cart').html(x);
 
                                 });
                         }

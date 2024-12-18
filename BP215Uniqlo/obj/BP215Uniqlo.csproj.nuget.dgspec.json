@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj": {}
+    "C:\\Users\\ll novbe\\Desktop\\bp215uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj": {
+    "C:\\Users\\ll novbe\\Desktop\\bp215uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj",
+        "projectUniqueName": "C:\\Users\\ll novbe\\Desktop\\bp215uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj",
         "projectName": "BP215Uniqlo",
-        "projectPath": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\BP215Uniqlo\\BP215Uniqlo\\obj\\",
+        "projectPath": "C:\\Users\\ll novbe\\Desktop\\bp215uniqlo\\BP215Uniqlo\\BP215Uniqlo.csproj",
+        "packagesPath": "C:\\Users\\ll novbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ll novbe\\Desktop\\bp215uniqlo\\BP215Uniqlo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ll novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -84,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

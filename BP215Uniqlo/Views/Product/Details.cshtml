@@ -33,7 +33,7 @@
                     <ul class="nav product__small__images" role="tablist">
                         <li role="presentation" class="pot-small-img">
                             <a class="active" href="#img-tab-" role="tab" data-bs-toggle="tab">
-                                <img src="~/imgs/products/@Model.CoverImage" alt="small-image">
+                                <img width ="100px" src="~/imgs/products/@Model.CoverImage" alt="small-image">
                             </a>
                         </li>
                         @foreach (var item in Model.ProductImages?.Select(x => x.FileUrl) ?? [])
@@ -80,10 +80,7 @@
                               
                             }
                             (@rating))
-                            <li><span class="ti-star"></span></li>
-                            <li><span class="ti-star"></span></li>
-                            <li><span class="ti-star"></span></li>
-                            <li><span class="ti-star"></span></li>
+                            
                         </ul>
                         <span class="rat__qun">(Based on 0 Ratings)</span>
                     </div>
@@ -94,7 +91,7 @@
                         @if (Model.Discount > 0)
                         {
                             <li class="old__prize">$ @Model.SellPrice</li>
-                            <li>$@Model.SellPrice * (100 - @Model.Discount)</li>
+                            <li>$@(Model.SellPrice * (100 - @Model.Discount)/100)</li>
 
                         }
                         else

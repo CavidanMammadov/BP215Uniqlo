@@ -1,4 +1,5 @@
 ﻿@using BP215Uniqlo.ViewModels.Basket
+@using BP215Uniqlo.ViewModels.Basket
 @model BasketVM
 <div class="shopping__cart__inner">
     <div class="offsetmenu__close__btn">
@@ -34,7 +35,7 @@
                 </div>
                 <button type="button" class="btn btn-danger"> <a asp-action="delete" asp-controller="Basket" asp-route-id="@item.Id">delete basket </a></button>
             </div>
-            @* <div class="shp__single__product">
+            <div class="shp__single__product">
         <div class="shp__pro__thumb">
         <a href="#">
         <img src="~/imgs/products/@item.ImageUrl" alt="product images">
@@ -48,8 +49,8 @@
         <div class="remove__btn">
         <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
         </div>
-        </div> *@
-        }
+        </div>
+        
 
 
 
@@ -62,5 +63,6 @@
             <li><a href="cart.html">View Cart</a></li>
             <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
         </ul>
+        }
     </div>
 </div>

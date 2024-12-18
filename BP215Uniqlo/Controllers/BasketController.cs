@@ -62,6 +62,7 @@ namespace BP215Uniqlo.Controllers
             {
                 item.Count = BasketIds!.FirstOrDefault(x => x.Id == item.Id)!.Count;
             }
+            vm.Products = prods;
             vm.SubTotal = prods.Sum(x => (100 - x.Discount) / 100 * x.SellPrice);
             return PartialView("_BasketPartial" , vm);
         }

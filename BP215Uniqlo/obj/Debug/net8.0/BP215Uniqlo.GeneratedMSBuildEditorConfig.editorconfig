@@ -17,115 +17,119 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BP215Uniqlo
 build_property.RootNamespace = BP215Uniqlo
-build_property.ProjectDir = C:\Users\user\source\repos\BP215Uniqlo\BP215Uniqlo\
+build_property.ProjectDir = C:\Users\ll novbe\Desktop\bp215uniqlo\BP215Uniqlo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\BP215Uniqlo\BP215Uniqlo
+build_property.MSBuildProjectDirectory = C:\Users\ll novbe\Desktop\bp215uniqlo\BP215Uniqlo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Category/Create.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Category/Index.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Category/Update.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/DashBoard/Index.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/DashBoard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaEJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Product/Create.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Product/Index.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Product/Update.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Product/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Slider/Create.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Slider/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Slider/Index.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/Slider/Update.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/Slider/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Account/Login.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Account/Register.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Home/About.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Home/Accesdenied.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Home/Accesdenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc2RlbmllZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Home/Index.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Product/Details.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Layouts/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0c1xfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Product/Index.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Shared/Components/Header/Default.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Shared/Components/Header/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Shared/_BasketPartial.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Shared/_BasketPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXNrZXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Shared/_Layout.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/Shared/_ProductPartial.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/Shared/_ProductPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/_ViewImports.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/BP215Uniqlo/BP215Uniqlo/Views/_ViewStart.cshtml]
+[C:/Users/ll novbe/Desktop/bp215uniqlo/BP215Uniqlo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
